@@ -1,26 +1,25 @@
 import React from 'react'
 // import "./home.scss"
-import Sidebar from "../sidebar/Siderbar"
-import Navbar from '../navbar/Navbar'
+
+
 import styled from 'styled-components'
+import { faHouseChimneyUser } from '@fortawesome/free-solid-svg-icons'
+import Sidebar from '../sidebar/Siderbar'
 
 
-const Homes = () => {
+const Dashboard = () => {
   return (
     <HomeStyle>
     <div className="home">
       {/* <Sidebar/> */}
       <Sidebar/>
-      <div className="homeContainer">
-        {/* <Navbar/> */}
-        <Navbar/>
-      </div>
+      
     </div>
     </HomeStyle>
   )
 }
 
-export default Homes
+export default Dashboard
 
 
 const HomeStyle=styled.div`
