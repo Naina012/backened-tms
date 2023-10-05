@@ -22,6 +22,8 @@ const Headers= () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
+       </li>
+      <li class="nav-item">
           <Link to="/" class="nav-link text-capitalize text-white m-1" href="#">Home
          <i class="fa-sharp fa-solid fa-house  fa-md ms-1" style={{color: '#ffffff'}}></i>
          </Link>

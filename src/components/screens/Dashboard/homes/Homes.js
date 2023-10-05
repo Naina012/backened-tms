@@ -1,17 +1,18 @@
 import React from 'react'
 // import "./home.scss"
-import Sidebar from '../../Component/sidebar/Sidebar'
-import Navbar from '../../Component/navbar/Navbar'
+import Sidebar from "../sidebar/Siderbar"
+import Navbar from '../navbar/Navbar'
 import styled from 'styled-components'
-import { faHouseChimneyUser } from '@fortawesome/free-solid-svg-icons'
 
 
 const Homes = () => {
   return (
     <HomeStyle>
     <div className="home">
+      {/* <Sidebar/> */}
       <Sidebar/>
       <div className="homeContainer">
+        {/* <Navbar/> */}
         <Navbar/>
       </div>
     </div>

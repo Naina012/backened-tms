@@ -4,15 +4,19 @@ import Layout from "./layout/layout";
 import SignIn from "./components/screens/sign_in/sign_in";
 import Login from "./components/screens/login/login";
 import Home from "./components/screens/home/home";
+import Homes from "./components/screens/Dashboard/homes/Homes";
+
 
 const Routing = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Homes/>} />
           <Route path="/" element={<Home />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/Login" element={<Login />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
