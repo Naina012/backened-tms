@@ -27,6 +27,11 @@ const Headers= () => {
          </Link>
         </li>
         <li class="nav-item">
+          <Link to="/dashboard" class="nav-link text-capitalize text-white m-1" href="#">Dashboard
+         <i class="fa-sharp fa-light fa-table-columns  fa-md ms-1" style={{color: '#ffffff'}}></i>
+         </Link>
+        </li>
+        <li class="nav-item">
           <Link to="/signIn" class="nav-link text-capitalize text-white m-1" href="#">Sign in
           <i class="fa-sharp fa-regular fa-handshake fa-md ms-1" style={{color: '#ffffff'}}></i>
           </Link>
