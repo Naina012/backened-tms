@@ -63,7 +63,19 @@ const SignIn = () => {
 
           <div>
             <label class="form-label">Contact no:</label>
-            <input type="text" class="form-control" placeholder="...." />
+            <input type="text" class="form-control"placeholder="...." />
+          </div>
+
+          <div>
+            <label class="form-label">Role:</label>
+            <select class="form-control" name="roles" id="roles" placeholder="Choose Your Role">
+              <optgroup label="Roles" >
+                <option disabled selected>Choose Your Role</option>
+                <option value="Super Admin>">Super Admin</option>
+                <option value="Admin>">Admin</option>
+                <option value="member">Memeber</option>
+              </optgroup>
+            </select>
           </div>
 
           <div>
