@@ -5,6 +5,8 @@ import SignIn from "./components/screens/sign_in/sign_in";
 import Login from "./components/screens/login/login";
 import Home from "./components/screens/home/home";
 import Dashboard from "./components/screens/dashboard/dashboard";
+import Projects from "./components/screens/projects/projects";
+import Create from "./components/screens/create/create";
 
 const Routing = () => {
   return (
@@ -14,8 +16,13 @@ const Routing = () => {
           {/* <Route path="/" element={<Homes/>} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/create" element={<Create/>} />
+          <Route path="/projects" element={<Projects/>} />
+         
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/Login" element={<Login />} />
+          
+         
 
         </Route>
       </Routes>

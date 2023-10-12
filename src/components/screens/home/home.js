@@ -164,7 +164,7 @@ const HomeStyle = styled.div`
 
 }
 .formStyle{
-  height: 595px;
+  height: 100vh;
   width:50%;
   background-color:#f8f9fa;
   

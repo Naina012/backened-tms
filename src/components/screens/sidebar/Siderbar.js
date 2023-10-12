@@ -1,7 +1,8 @@
 import React from 'react';
 import {FaDiagramProject} from "react-icons/fa6"
 import { FaUsers,  FaSignOutAlt } from 'react-icons/fa'; 
-import {MdCreateNewFolder} from  "react-icons/md"
+import {MdCreateNewFolder} from  "react-icons/md";
+import { Link } from "react-router-dom"
 
 
 import styled from "styled-components"
@@ -16,14 +17,19 @@ const Sidebar = () => {
           <span className="icon-text ">Users</span>
           </li>
         <li>
+        <Link to="/create" class="text-white text-decoration-none">
           <MdCreateNewFolder />
           <br/>
           <span className="icon-text ">Create New</span>
+          </Link>
         </li>
+
         <li>
+        <Link to="/projects" class="text-white text-decoration-none">
           <FaDiagramProject />
           <br/>
           <span className="icon-text">Projects</span>
+        </Link>
         </li>
         <li>
           <FaSignOutAlt />
@@ -40,7 +46,7 @@ export default Sidebar;
 
 const SidebarStyle=styled.div`
 .sidebar {
-  background-color:#333;
+  background-color:#818589;
   color:#fff ;
   
  height: 100v
