@@ -1,185 +1,78 @@
-import React from 'react'
-import styled from "styled-components";
-import { BiCategoryAlt, BiSolidGroup } from 'react-icons/bi';
-import { FaProjectDiagram } from 'react-icons/fa'
-import { MdDashboardCustomize, MdCardMembership, MdAdminPanelSettings } from "react-icons/md"
-import { GoVerified } from "react-icons/go"
-import { IoIosCreate } from "react-icons/io"
-import { AiFillSetting } from "react-icons/ai"
+import React from 'react';
+import {FaDiagramProject} from "react-icons/fa6"
+import { FaUsers,  FaSignOutAlt } from 'react-icons/fa'; 
+import {MdCreateNewFolder} from  "react-icons/md"
 
 
+import styled from "styled-components"
 const Sidebar = () => {
-
-    return (
-
-        <SidebarStyle>
-            <div className='sidebar'>
-                <div className="top">
-                    <span className="logo">Super Admin</span>
-                </div>
-                <hr />
-                <div className="center">
-                    <ul>
-                        <p className="title">MAIN</p>
-                        <li>
-                            <MdDashboardCustomize className='icon' />
-                            <span>Dashboard</span>
-                        </li>
-                        <p className="title"> ADMIN</p>
-                        <li>
-                            <MdAdminPanelSettings className='icon' />
-                            <span>Admin</span>
-                        </li>
-                        <li>
-                            <IoIosCreate className='icon' />
-                            <span>Create New</span>
-                        </li>
-                        <li>
-                            <BiSolidGroup className='icon' />
-                            <span>Admin Group</span>
-                        </li>
-
-                        <p className="title">CATEGORIES</p>
-                        <li>
-                            <BiCategoryAlt className='icon' />
-                            <span>Categories</span>
-                        </li>
-                        <li>
-                            <IoIosCreate className='icon' />
-                            <span>Create New</span>
-                        </li>
-
-                        <p className="title">TEAM MEMBERS</p>
-                        <li>
-                            <GoVerified className='icon' />
-                            <span>Designations</span>
-                        </li>
-                        <li>
-                            <IoIosCreate className='icon' />
-                            <span>Create New</span>
-                        </li>
-                        <li>
-                            <MdCardMembership className='icon' />
-                            <span>Members</span>
-                        </li>
-
-                        <p className="title">PROJECTS</p>
-                        <li>
-                            {/* <i class="fa-thin fa-diagram-project"></i> */}
-                            <FaProjectDiagram className='icon' />
-                            <span>Projects</span>
-                        </li>
-                        <li>
-                            <IoIosCreate className='icon' />
-                            <span>Create New</span>
-                        </li>
-                        <p className="title">USEFUL LINKS</p>
-                        <li>
-                            <AiFillSetting className="icon" />
-                            <span>Settings</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </SidebarStyle>
-    )
-}
+  return (
+    <SidebarStyle>
+    <div className="sidebar min-vh-100 w-100">
+      <ul>
+        <li>
+          <FaUsers />
+          <br/>
+          <span className="icon-text ">Users</span>
+          </li>
+        <li>
+          <MdCreateNewFolder />
+          <br/>
+          <span className="icon-text ">Create New</span>
+        </li>
+        <li>
+          <FaDiagramProject />
+          <br/>
+          <span className="icon-text">Projects</span>
+        </li>
+        <li>
+          <FaSignOutAlt />
+          <br/>
+          <span className="icon-text">Logout</span>
+        </li>
+      </ul>
+    </div>
+    </SidebarStyle>
+  );
+};
 
 export default Sidebar;
 
-const SidebarStyle = styled.div`
-
+const SidebarStyle=styled.div`
 .sidebar {
-    flex: 1;
-    border-right: 0.5px solid rgb(230, 225, 225);
-    min-height: 100vh;
-    background-color: white;
-    min-width:40vh
+  background-color:#333;
+  color:#fff ;
   
-    .top {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+ height: 100v
+  ${'' /* position: fixed; */}
+  top: 15%;
+  left: 0;
+  ${'' /* overflow-y: auto; */}
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px;
+  text-align: center;
+}
+
+.icon-text {
+  display: none; 
+}
+
+@media (min-width: 600px) {
   
-        .logo {
-            align-item:center;
-            font-size: 20px;
-            font-weight: bold;
-            color: #6699CC;
-        }
-    }
-  
-    hr {
-        height: 0;
-        border: 0.5px solid rgb(230, 225, 225);
-    }
-  
-    .center {
-        padding-left: 10px;
-         width:150px;
-  
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-  
-            .title {
-                font-size: 10px;
-                font-weight: bold;
-                color: #999;
-                margin-top: 15px;
-                margin-bottom: 5px;
-            }
-  
-            li {
-                display: flex;
-                align-items: center;
-                padding: 4px;
-                cursor: pointer;
-  
-                &:hover {
-                    background-color: #ece8ff;
-                }
-  
-                .icon {
-                    font-size: 18px;
-                    color: #6699CC;
-                }
-  
-                span {
-                    font-size: 13px;
-                    font-weight: 600;
-                    color: black;
-                    margin-left: 10px;
-                }
-            }
-        }
-    }
-  
-    .bottom {
-        display: flex;
-        align-items: center;
-        margin: 10px;
-  
-        .colorOption {
-            width: 20px;
-            height: 20px;
-            border-radius: 5px;
-            border: 1px solid #7451f8;
-            cursor: pointer;
-            margin: 5px;
-  
-            &:nth-child(1) {
-                background-color: whitesmoke;
-            }
-  
-            &:nth-child(2) {
-                background-color: #333;
-            }
-  
-        }
-    }
-  } 
-  
- `;
+  .icon-text {
+    display: inline; 
+    ${'' /* color:#fff; */}
+  }
+}
+`;
+
+
+
+

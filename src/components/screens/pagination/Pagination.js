@@ -2,14 +2,18 @@ import React from 'react';
 
 const Pagination = ({ totalPages, currentPage, pageChange }) => {
   const pageNumbers = [];
-  const pageShow = Math.ceil(totalPages / 2); 
-
+  const pageShow = totalPages;
 
   let startPage = (Math.floor((currentPage - 1) / pageShow) * pageShow) + 1;
   let endPage = Math.min(startPage + pageShow - 1, totalPages);
   for (let i = startPage; i <= endPage; i++) {
     pageNumbers.push(i);
   }
+
+  const handlePageChange = (pageNumber, event) => {
+    event.preventDefault(); 
+    pageChange(pageNumber);
+  };
 
   return (
     <div className='pagination-container'>
@@ -20,9 +24,9 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
               className="page-link"
               href="#"
               aria-label="Previous"
-              onClick={() => pageChange(currentPage - 1)}
+              onClick={(e) => handlePageChange(currentPage - 1, e)}
             >
-              <span aria-hidden="true">&laquo;</span>
+              <span aria-label="Previous" aria-hidden="true">&laquo;</span>
             </a>
           </li>
           {pageNumbers.map((pageNumber) => (
@@ -33,7 +37,7 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
               <a
                 className="page-link"
                 href="#"
-                onClick={() => pageChange(pageNumber)}
+                onClick={(e) => handlePageChange(pageNumber, e)}
               >
                 {pageNumber}
               </a>
@@ -44,9 +48,9 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
               className="page-link"
               href="#"
               aria-label="Next"
-              onClick={() => pageChange(currentPage + 1)}
+              onClick={(e) => handlePageChange(currentPage + 1, e)}
             >
-              <span aria="true">&raquo;</span>
+              <span aria-label="Next" aria-hidden="true">&raquo;</span>
             </a>
           </li>
         </ul>
@@ -56,41 +60,3 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
 };
 
 export default Pagination;
-
-
-
-
-
-
-// import React from 'react'
-
-
-
-// const  Pagination=()=>{
-//   return (
-//     <div className='pagination-container'>
-//         <nav aria-label="Page navigation example">
-//   <ul class="pagination">
-//     <li class="page-item">
-
-//       <a class="page-link" href="#" aria-label="Previous">
-//         <span aria-hidden="true">&laquo;</span>
-//       </a>
-//     </li>
-//     <li class="page-item"><a class="page-link" href="*">1</a></li>
-//     <li class="page-item"><a class="page-link" href="*">2</a></li>
-//     <li class="page-item"><a class="page-link" href="*">3</a></li>
-//     <li class="page-item">
-//       <a class="page-link" href="#" aria-label="Next">
-//         <span aria-hidden="true">&raquo;</span>
-//       </a>
-//     </li>
-//   </ul>
-// </nav>
-//     </div>
-
-//   )
-// }
-
-// export default Pagination
-

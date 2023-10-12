@@ -6,7 +6,7 @@ const Headers= () => {
   return (
     <HeaderStyle>
     <div className='color'>
-     <nav class="navbar navbar-expand-lg  ">
+     <nav class="navbar navbar-expand-lg w-100 ">
  
   <div class="container m-auto ">
     <span class="d-block d-sm-flex">
