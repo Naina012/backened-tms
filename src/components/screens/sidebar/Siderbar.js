@@ -40,13 +40,13 @@ export default Sidebar;
 
 const SidebarStyle=styled.div`
 .sidebar {
-  background-color:#333;
+  background-color:#818589;
   color:#fff ;
   
  height: 100v
   ${'' /* position: fixed; */}
-  top: 15%;
-  left: 0;
+  /* top : 15%;
+  left: 0; */
   ${'' /* overflow-y: auto; */}
 }
 
