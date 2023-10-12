@@ -15,10 +15,10 @@ const Dashboard = () => {
       <div className="home">
         <Sidebar />
         <div className='homeContainer' >
-          <div className='header'>
+          <div className='header  '>
             <h1>Admin</h1>
             <div className="search">
-              <input type="text" placeholder="search..." />
+              <input type="text " placeholder="search..." />
               <BiSearchAlt2 className='searchIcon' />
             </div>
           </div>

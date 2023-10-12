@@ -20,6 +20,11 @@ const SignIn = () => {
           </div>
 
           <div>
+            <label class="form-label">Enter code:</label>
+            <input type="text" placeholder="..." class="form-control" />
+          </div>
+
+          <div>
             <label class="form-label">Name:</label>
             <input type="text" placeholder="xyz" class="form-control" />
           </div>
@@ -39,12 +44,12 @@ const SignIn = () => {
 
           <div>
             <label for="exampleInputPassword1" class="form-label">
-              Password:
+              Generate Password:
             </label>
             <input
               type="password"
               class="form-control"
-              placeholder="..."
+              placeholder="use strong password"
               id="exampleInputPassword1"
             />
           </div>
