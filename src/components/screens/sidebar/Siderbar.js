@@ -1,8 +1,9 @@
 import React from 'react';
-import {FaDiagramProject} from "react-icons/fa6"
-import { FaUsers,  FaSignOutAlt } from 'react-icons/fa'; 
+import { FaUsers } from 'react-icons/fa'; 
 import {MdCreateNewFolder} from  "react-icons/md";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import {LuFileStack} from "react-icons/lu";
+import {RiLogoutCircleLine} from "react-icons/ri"
 
 
 import styled from "styled-components"
@@ -26,13 +27,13 @@ const Sidebar = () => {
 
         <li>
         <Link to="/projects" class="text-white text-decoration-none">
-          <FaDiagramProject />
+          <LuFileStack />
           <br/>
           <span className="icon-text">Projects</span>
         </Link>
         </li>
         <li>
-          <FaSignOutAlt />
+          <RiLogoutCircleLine />
           <br/>
           <span className="icon-text">Logout</span>
         </li>
