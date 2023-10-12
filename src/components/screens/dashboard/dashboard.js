@@ -30,7 +30,7 @@ const Dashboard = () => {
 
       <div className="Dashboard w-100 min-vh-100 bg-light d-flex" >
         <Sidebar />
-        <div className=" DashboardContainer w-100   ">
+        <div className=" DashboardContainer w-100 ">
 
           <div className=" Data d-md-flex flex-wrap justify-content-between mt-3 ms-4 me-4">
 
