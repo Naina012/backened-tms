@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import { styled } from "styled-components";
 import homeImage from "../../image/homeImage.png"
 import ReCAPTCHA from "react-google-recaptcha"
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -48,7 +49,7 @@ const Home = () => {
             </div>
 
 
-<div class="fs-6 mt-1">
+<div class="fs-6 mt-1 captcha">
       <b>Captcha: </b>
       <p class="fs-6">Complete the CAPTCHA to prove you're human:</p>
       <ReCAPTCHA
@@ -56,15 +57,22 @@ const Home = () => {
         
         onChange={onCaptchaVerify}
       />
-      {isVerified && <p>CAPTCHA Verified!</p>}
+      {isVerified && <p style={{color:"green"}}>CAPTCHA Verified!</p>}
     </div>
 
            
 
             <br></br>
-            <button type="submit" className="btn  fs-5 mt-3 subMit mb-3">
+            <button type="submit" className="btn  fs-5  subMit mb-3">
               Login
             </button>
+            <div className="d-flex justify-content-between ms-0 mt-2 text-dark">
+            <Link to="/signIn" >
+              <a href="*" style={{color:"black"}}>New User Registration</a> 
+              </Link>
+              <a href="*" style={{color:"black"}}> Forgot Password?</a>
+
+            </div>
           </Form>
         </Formik>
       </div>
@@ -260,9 +268,9 @@ const HomeStyle = styled.div`
     background-color: #f8f9fa;
     cursor:pointer;
   }
-  .formStyle:hover {
+  /* .formStyle:hover {
     background-color: #6699cc;
-  }
+  } */
   .subMit {
     margin-left: 30%;
     background-color: #712cf9;
@@ -300,8 +308,8 @@ const HomeStyle = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    animation-name: example;
-    animation-duration: 3s;
+    /* animation-name: example;
+    animation-duration: 2s; */
   }
 
   .card1 {
@@ -318,11 +326,16 @@ const HomeStyle = styled.div`
   }
   @media screen and (max-width: 600px) {
     .formStyle {
-      width: 100%;
+      width: 60%;
+      left:10%;
     }
     .homeImage {
-      width: 100%;
+      width: 60%;
+      height:100%;
       animation: none;
+    }
+    .right{
+      height:30vh;
     }
   }
 `;

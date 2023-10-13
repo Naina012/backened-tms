@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layout/layout";
 import SignIn from "./components/screens/sign_in/sign_in";
-import Login from "./components/screens/login/login";
+// import Login from "./components/screens/login/login";
 import Home from "./components/screens/home/home";
 import Dashboard from "./components/screens/dashboard/dashboard";
 import Projects from "./components/screens/projects/projects";
@@ -20,7 +20,7 @@ const Routing = () => {
           <Route path="/projects" element={<Projects/>} />
          
           <Route path="/signIn" element={<SignIn />} />
-          <Route path="/Login" element={<Login />} />
+          {/* <Route path="/Login" element={<Login />} /> */}
           
          
 
