@@ -9,11 +9,11 @@ const Dashboard = () => {
   const dataPerPage = 5;
   const data = [
     { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
+    { id: 2, name: 'Parul', email: 'parul2002@gmail.com', city: 'Mohali', phone: 8969665580 },
+    { id: 3, name: 'Arjun', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
+    { id: 4, name: 'Naina', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
+    { id: 5, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
+    { id: 6, name: 'parul', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
 
   ];
 
@@ -91,6 +91,13 @@ const DashboardStyle = styled.div`
 
 .tableContent{
   width:95%;
+}
+
+table tr{
+  opacity:0.6;
+}
+table tr:hover{
+  opacity:1;
 }
 @media screen and (max-width:600px){
  .Dashboard{
