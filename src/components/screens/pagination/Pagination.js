@@ -22,7 +22,7 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
           <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
             <a
               className="page-link"
-              href="#"
+              href="*"
               aria-label="Previous"
               onClick={(e) => handlePageChange(currentPage - 1, e)}
             >
@@ -36,7 +36,7 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
             >
               <a
                 className="page-link"
-                href="#"
+                href="*"
                 onClick={(e) => handlePageChange(pageNumber, e)}
               >
                 {pageNumber}
@@ -46,7 +46,7 @@ const Pagination = ({ totalPages, currentPage, pageChange }) => {
           <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
             <a
               className="page-link"
-              href="#"
+              href="*"
               aria-label="Next"
               onClick={(e) => handlePageChange(currentPage + 1, e)}
             >
