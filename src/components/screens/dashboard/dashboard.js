@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Sidebar from '../sidebar/Siderbar';
 import Pagination from '../pagination/Pagination';
+import {GrView} from "react-icons/gr"
+import {AiOutlineEdit,AiOutlineDelete} from "react-icons/ai"
 
 const Dashboard = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const dataPerPage = 5;
   const data = [
-    { id: 1, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 2, name: 'Parul', email: 'parul2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 3, name: 'Arjun', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 4, name: 'Naina', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 5, name: 'Sujeet Ojha', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
-    { id: 6, name: 'parul', email: 'ojhasujeet2002@gmail.com', city: 'Mohali', phone: 8969665580 },
+    { id: 1, Company: 'Skill2skills' , location: 'Mohali' ,PAN :123456 },
+    { id: 2, Company: 'Skill2skills' , location: 'Mohali', PAN :123456 },
+    { id: 3, Company: 'Skill2skills' , location: 'Mohali',  PAN :123456 },
+    { id: 4, Company: 'Skill2skills' ,location: 'Mohali',  PAN :123456 },
+    { id: 5, Company: 'Skill2skills',  location: 'Mohali',  PAN :123456 },
+    { id: 6, Company: 'Skill2skills' , location: 'Mohali',  PAN :123456 },
 
   ];
 
@@ -48,20 +50,30 @@ const Dashboard = () => {
                   <thead>
                     <tr>
                       <th>S No.</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>City</th>
-                      <th>Phone No.</th>
+                      <th>Company</th>
+                      <th>Location</th>
+                      <th>PAN No.</th>
+                      <th>View</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
                     </tr>
                   </thead>
                   <tbody>
                     {currentData.map((item, index) => (
                       <tr key={index}>
                         <td>{item.id}</td>
-                        <td>{item.name}</td>
-                        <td>{item.email}</td>
-                        <td>{item.city}</td>
-                        <td>{item.phone}</td>
+                        <td>{item.Company}</td>
+                        <td>{item.location}</td>
+                        <td>{item.PAN}</td>
+                        <td>
+                          <span><GrView/></span>
+                        </td>
+                        <td>
+                          <span><AiOutlineEdit/></span>
+                        </td>
+                        <td>
+                          <span><AiOutlineDelete/></span>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -91,13 +103,14 @@ const DashboardStyle = styled.div`
 
 .tableContent{
   width:95%;
+  cursor:pointer;
 }
 
 table tr{
-  opacity:0.6;
+  opacity:0.7;
 }
 table tr:hover{
-  opacity:1;
+ opacity:1;
 }
 @media screen and (max-width:600px){
  .Dashboard{
