@@ -4,6 +4,11 @@ import Sidebar from '../sidebar/Siderbar';
 import Pagination from '../pagination/Pagination';
 import {GrView} from "react-icons/gr"
 import {AiOutlineEdit,AiOutlineDelete} from "react-icons/ai"
+import { Link } from 'react-router-dom'; // Import Link from React Router
+
+
+
+import { FaPlus } from "react-icons/fa"; // Import the "+" icon
 
 const Dashboard = () => {
 
@@ -29,18 +34,17 @@ const Dashboard = () => {
 
   return (
     <DashboardStyle>
-
-      <div className="Dashboard w-100 min-vh-100 bg-light d-flex" >
+      <div className="Dashboard w-100 min-vh-100 bg-light d-flex">
         <Sidebar />
         <div className=" DashboardContainer w-100 ">
-
           <div className=" Data d-md-flex flex-wrap justify-content-between mt-3 ms-4 me-4">
-
             <div className=" Admin ml-3" style={{ margin: '0 10px' }}>
-            <b> Admin</b>
+              <b> Admin</b>
             </div>
             <div className="search" style={{ margin: '0 10px' }}>
-            <input type="text" placeholder="Search..." />
+              <Link to="/companyform"> {/* Add a Link to the form page */}
+                <span className="plus-icon"><FaPlus style={{ color: 'blue' }} /></span>
+              </Link>
             </div>
           </div>
           <div className=' tableContent mt-4 ms-4 me-4'>

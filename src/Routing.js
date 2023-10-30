@@ -7,7 +7,7 @@ import Home from "./components/screens/home/home";
 import Dashboard from "./components/screens/dashboard/dashboard";
 import Projects from "./components/screens/projects/projects";
 import Create from "./components/screens/create/create";
-
+import Companyform from "./components/screens/dashboard/companyform";
 const Routing = () => {
   return (
     <BrowserRouter>
@@ -20,6 +20,7 @@ const Routing = () => {
           <Route path="/projects" element={<Projects/>} />
          
           <Route path="/signIn" element={<SignIn />} />
+          <Route path="/companyform" element={<Companyform/>} />
           {/* <Route path="/Login" element={<Login />} /> */}
           
          
